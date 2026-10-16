@@ -1,0 +1,132 @@
+:root {
+  --cor-fundo: #f4f6fb;
+  --cor-cena-topo: #ffffff;
+  --cor-cena-base: #e9edf6;
+  --cor-painel: #ffffff;
+  --cor-texto: #1b1e2b;
+  --cor-texto-suave: #5b6478;
+  --cor-hp: #2fbf5b;
+  --cor-hp-fundo: #e0e4ee;
+  --cor-botao: #ffffff;
+  --cor-botao-borda: #c9d0e0;
+  --cor-borda: #e2e6f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.arena {
+  width: min(900px, 92vw);
+  padding: 24px;
+}
+
+.cena {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  background: linear-gradient(180deg, var(--cor-cena-topo) 0%, var(--cor-cena-base) 100%);
+  border: 1px solid var(--cor-borda);
+  border-radius: 16px;
+  padding: 24px;
+  min-height: 320px;
+}
+
+.personagem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 220px;
+}
+
+.personagem--direita .sprite {
+  transform: scaleX(-1); /* vilão "olhando" para o herói */
+}
+
+.sprite {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  /* fundo transparente das PNGs aparece sobre a cena */
+  image-rendering: auto;
+}
+
+.hp {
+  width: 100%;
+}
+
+.hp__topo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.hp__valor {
+  color: var(--cor-texto-suave);
+}
+
+.hp__barra {
+  height: 14px;
+  background: var(--cor-hp-fundo);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.hp__preenchimento {
+  height: 100%;
+  background: var(--cor-hp);
+  transition: width 0.3s ease;
+}
+
+.menu {
+  margin-top: 20px;
+  background: var(--cor-painel);
+  border: 1px solid var(--cor-borda);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.menu__titulo {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cor-texto-suave);
+  margin-bottom: 12px;
+}
+
+.menu__botoes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.ataque {
+  padding: 12px 16px;
+  font-size: 15px;
+  color: var(--cor-texto);
+  background: var(--cor-botao);
+  border: 1px solid var(--cor-botao-borda);
+  border-radius: 8px;
+  cursor: default;
+}
+
+.aviso {
+  text-align: center;
+  color: var(--cor-texto-suave);
+  font-size: 13px;
+  margin-top: 16px;
+}

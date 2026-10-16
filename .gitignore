@@ -23,3 +23,7 @@ yarn-error.log*
 # Entregas pesadas dos alunos (manter fora do histórico)
 entrega/*.mp4
 entrega/*.mov
+
+# Imagens-fonte (JPEG) — usamos os PNGs transparentes gerados a partir delas
+rpg-web/public/images/*.jpeg
+rpg-web/public/images/*.jpg

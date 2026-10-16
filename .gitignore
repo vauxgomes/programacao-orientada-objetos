@@ -1,0 +1,25 @@
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Editores / IDEs
+.vscode/
+.idea/
+*.swp
+
+# Node / TypeScript
+node_modules/
+dist/
+build/
+*.tsbuildinfo
+coverage/
+npm-debug.log*
+yarn-error.log*
+
+# Ambiente
+.env
+.env.local
+
+# Entregas pesadas dos alunos (manter fora do histórico)
+entrega/*.mp4
+entrega/*.mov
